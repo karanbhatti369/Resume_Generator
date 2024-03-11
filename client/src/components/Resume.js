@@ -14,13 +14,12 @@ const Resume = ({ result }) => {
   });
 
  
-
-
-  if (JSON.stringify(result) === '{}') {
+if (JSON.stringify(result) === '{}') {
     return <ErrorPage />
   }
 
   const replaceWithBr = (string) => {
+    if (!string) return;
     return string.replace(/\n/g, '<br>');
   };
   
@@ -99,10 +98,9 @@ const Resume = ({ result }) => {
               JOB RESPONSIBILITIES
             </h2>
             <p dangerouslySetInnerHTML={{
-              __html: replaceWithBr(result.keypoints),
-            }}
-              className='resumeBodycontent'
-            />
+  __html: replaceWithBr(result.objective),
+}} className='resumeBodycontent' />
+
 
           </div>
         </div>

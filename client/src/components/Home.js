@@ -11,8 +11,12 @@ const Home = ({setResult}) => {
     const [headshot, setHeadshot] = useState(null);
     const [loading, setLoading] = useState(false);
     const [companyInfo, setCompanyInfo] = useState([{ name: "", position: "", duration: "" }]); // Changed to setCompanyInfo
-    
     const navigate = useNavigate();
+
+
+
+
+
     // Function to handle form submission.
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -37,7 +41,7 @@ const Home = ({setResult}) => {
                 if (res.data.message) {
                     console.log(res.data.data);
                     setResult(res.data.data);
-                    navigate = '/resume'; // Changed to window.location.href
+                    navigate('/resume'); // Changed to window.location.href
                 }
             })
             .catch((err) => {
