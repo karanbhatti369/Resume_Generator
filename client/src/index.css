@@ -81,6 +81,63 @@ body {
               label{
               margin-bottom: 10px;
               }
+
+              #addBtn{
+                background-color: green;
+                margin-right: 5px;
+              }
+
+              #deleteBtn{
+                background-color: red;
+              }
              
+
+              #photo{
+                width: 50%
+              }
+
+              .header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 80%;
+                margin: 0 auto;
+                background-color: #e8e2e2;
+                padding: 30px;
+                border-radius: 3px,3px,0,0;
+              }
+              .resumeTitle{
+                opacity: 0.6;
+              }
+              .headerTitle{
+               margin-bottom: 15px;
+              }
     
-    
+              .resumeImage {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 50%; /* This will make the image circular */
+                border: 1px solid #0e0e0e;
+                margin: 0 auto;
+                display: block;
+              }
+              
+
+
+    .resumeBody{
+      width: 80%;
+      margin: 0 auto;
+      padding: 30px;
+      min-height: 80vh;
+      border: 1px solid #e0e0ea;
+    }
+
+    .resumeTitle{
+      margin-bottom: 5px;
+    }
+
+    .resumeBodycontent{
+text-align: justify;
+margin-bottom: 30px;
+    }

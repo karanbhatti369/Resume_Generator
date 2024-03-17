@@ -23,7 +23,7 @@ if (JSON.stringify(result) === '{}') {
     return string.replace(/\n/g, '<br>');
   };
   
- 
+  console.log("Objective before replaceWithBr:", result.objective);
 
   return (
     <>
@@ -35,7 +35,7 @@ if (JSON.stringify(result) === '{}') {
         <header className='header' >
           <div>
             <h1>{result.fullname}</h1>
-            <p className='resumeTitle heaherTitle'>
+            <p className='resumeTitle headerTitle'>
               {result.currentPosition}( {result.currentTechnologies})
             </p>
 
@@ -46,9 +46,9 @@ if (JSON.stringify(result) === '{}') {
 
           <div>
             <img
+              className='resumeImage'
               src={result.image_url}
               alt={result.fullname}
-              className='resumeImage'
             />
           </div>
         </header>
@@ -59,7 +59,7 @@ if (JSON.stringify(result) === '{}') {
               PROFILE SUMMARY
             </h2>
             <p dangerouslySetInnerHTML={{
-              __html: replaceWithBr(result.objective),
+              __html: replaceWithBr(result.chatgptData.objective),
             }}
               className='resumeBodycontent'
             />
@@ -67,7 +67,7 @@ if (JSON.stringify(result) === '{}') {
 
           <div>
             <h2 className='resumeBodyTitle'>
-              WORK EXPERIENCE
+              WORK HISTORY
             </h2>
             {
               result.workHistory.map((work) => (
@@ -85,7 +85,7 @@ if (JSON.stringify(result) === '{}') {
               JOB PROFILE
             </h2>
             <p dangerouslySetInnerHTML={{
-              __html: replaceWithBr(result.jobResponsibilties),
+              __html: replaceWithBr(result.chatgptData.jobResponsiblities ),
             }}
               className='resumeBodycontent'
             />
@@ -98,7 +98,7 @@ if (JSON.stringify(result) === '{}') {
               JOB RESPONSIBILITIES
             </h2>
             <p dangerouslySetInnerHTML={{
-  __html: replaceWithBr(result.objective),
+  __html: replaceWithBr(result.chatgptData.keypoints),
 }} className='resumeBodycontent' />
 
 

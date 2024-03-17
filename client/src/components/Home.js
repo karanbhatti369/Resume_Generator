@@ -158,7 +158,7 @@ const Home = ({setResult}) => {
 
                         <div className='btn_group'>
                             {companyInfo.length - 1 === index && companyInfo.length < 4 &&
-                                <button id="addbtn" onClick={handleAddCompany}>Add Company</button>}
+                                <button id="addBtn" onClick={handleAddCompany}>Add Company</button>}
 
                             {companyInfo.length > 1 &&
                                 <button id="deleteBtn" onClick={() => handleRemoveCompany(index)}>Remove</button>}
