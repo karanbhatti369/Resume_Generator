@@ -1,4 +1,3 @@
-
 import './App.css';
 import Home from './components/Home';
 import Resume from './components/Resume';
@@ -13,7 +12,10 @@ function App() {
     <Router>
     
     <div className="App">
-    <h1>Resume  Builder with OpenAi</h1>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <div className="wave"></div>
+    <h1 className="rubik-maps-regular">Resume  Builder with OpenAi</h1>
     
   <Routes>
    <Route path='/' element={<Home setResult={setResult} />} />
