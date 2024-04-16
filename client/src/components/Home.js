@@ -1,4 +1,4 @@
-import Loading from './Loading';
+import Loading from './LoadingScreen';
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate} from 'react-router-dom';
