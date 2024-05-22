@@ -13,8 +13,9 @@ function App() {
     <Router>
     
     <div className="App">
+      <header>
     <h1>Resume  Builder with OpenAi</h1>
-    
+    </header>
   <Routes>
    <Route path='/' element={<Home setResult={setResult} />} />
    <Route path='/resume' element={<Resume result={result} />} />
